@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family:Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.container {
+width:100%;
+min-height: 100vh;
+padding: 10px;
+}
+
+.todo-app{
+  width: 100%;
+  max-width: 540px;
+  background: #5280b4b6;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo-app h2{
+  color: #f1ecf1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-left: 90px;
+
+}
+
+.todo-app h2 img{
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+}
+
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+
+}
+input{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #05023a;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+
+}
+
+
+ul li{
+  list-style: none;
+  font-size: large;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-image: url(uncheck.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+
+}
+ul li.checked::before{
+  background-image: url(checked.png);
+
+}
+
+
+
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #070606;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+ul li span:hover {
+  background-color: #093950;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 5px; 
+  }
+
+  .todo-app {
+    max-width: 100%;
+    margin: 50px auto 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    padding-left: 10px; 
+  }
+
+  input {
+    margin-bottom: 15px;
+  }
+
+  button {
+    padding: 8px 20px;
+    padding-bottom: 30px;
+  }
+
+  ul li {
+    padding: 20px 18px; 
+    padding-left: 40px;
+  }
+
+  ul li::before {
+    width: 30px; 
+    height: 30px;
+  }
+
+  ul li span {
+    width: 30px; 
+    height: 30px;
+    font-size: 28px; 
+  }
+}
+
+
+
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  color: black;
+  background: linear-gradient(220deg,#8464dab4 ,#6cc9aa9a,  #5d0b7ec3,#58cc6d9a,#355c91b4, #406e99c1,#48d8a8c3, #8464dab4 ,#6cc9aa9a,  #5d0b7ec3,#58cc6d9a,#355c91b4, #406e99c1,#48d8a8c3 );
+  background-size: 400% 400%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "inter" sans-serif;
+  animation: fadeInAnimation 10s ease-in-out infinite ;
+}
+
+@keyframes fadeInAnimation {
+0% {
+    background-position: 0% 50%;
+}
+50%{
+  background-position: 50% 100%;
+}
+100% {
+    background-position: 100% 0%;
+}
+}
